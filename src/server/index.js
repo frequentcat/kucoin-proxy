@@ -13,13 +13,22 @@ const getServer = async (client) => {
     app.use(express.json());
 
     router.get('/api/v1/market/candles', async (req, res) => {
-        console.log(req);
         res.send(await client.getCandles(req.query.symbol, req.query.interval));
     });
+    router.get('/health', async (req, res) => {
+        console.log('health query');
+        res.send('OKAY');
+    });
+
 
     router.use(createProxyMiddleware({
-        target: 'https://api.kucoin.com', changeOrigin: true
+        target: 'https://openapi-v2.kucoin.com',
+        changeOrigin: true,
+        pathRewrite: { '^/api/v3/api/v1': '/api/v1' },
+        logLevel: 'debug'
     }));
+
+    app.use("/api/v3/", router);
 
     app.use("/", router);
     return app

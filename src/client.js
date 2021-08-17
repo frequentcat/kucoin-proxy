@@ -1,4 +1,4 @@
-const Kucoin = require('kucoin-websocket-api');
+import Kucoin from 'kucoin-websocket-api';
 import FixedQueue from './misc/FixedQueue.js';
 
 class Client {
@@ -13,11 +13,15 @@ class Client {
     }
 
     subscribe(symbol, interval) {
+	console.log('new client subscription ' + symbol);
         if (!this.subscribed.find(e => e === symbol + interval)) {
 
             this.subscribed.push(symbol + interval);
 
             //this.client
+
+// todo: transform this original code to use the kucoin api correct
+/*
             this.client.websockets.chart(symbol, interval, (symbol, interval, chart) => {
                 if (!this.klines[symbol + interval]) {
                     this.klines[symbol + interval] = new FixedQueue(1000, []);
@@ -45,6 +49,8 @@ class Client {
 
                 }
             }, 1000);
+*/
+
         }
     }
     async getCandles(symbol, interval) {

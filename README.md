@@ -1,5 +1,22 @@
 # kucoin-proxy
 
+
+
+## UNDER DEVELOPMENT, DO NOT USE YET
+
+
+# todo:
+
+- implement correct candle calls and transformation 
+
+# ...
+
+# notes:
+https://github.com/ccxt/ccxt/blob/master/python/ccxt/kucoin.py
+
+https://github.com/markokeeffe/kucoin-websocket-api/commit/ae288df3b9cc37e6c2c6ee6d14758972dc02b589#diff-c34458b7199f090dcf72b8f57ada0a1d3f17ae15dde0a97a9c46cff2daebccfd
+# ...
+
 in the fine arts of forking, thanks to the originator project binance-proxy.
 
 

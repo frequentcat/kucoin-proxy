@@ -16,6 +16,7 @@
     "express": "^4.17.1",
     "http-proxy-middleware": "^2.0.1",
     "kucoin-websocket-api": "^0.2.3",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "ws": "^8.1.0"
   }
 }
