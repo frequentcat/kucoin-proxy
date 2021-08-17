@@ -24,6 +24,7 @@ in the fine arts of forking, thanks to the originator project binance-proxy.
 Long story short: a kucoin proxy for freqtrade that is using websockets to maintain candlestick/klines data in memory, thus having great performance and reducing the amount of API calls to the Kucoin API.
 All other calls are proxied as usual.
 
+![schema](proxy_scheme.png]
 
 Start the docker instance and then point freqtrade to it, rate limit can be disabled:
 
