@@ -49,3 +49,13 @@ Start the docker instance and then point freqtrade to it, rate limit can be disa
 
 with the .env file (copy the .env.sample) you can set an other port for the service.
 If you want to let this run in host network mode, check out the binance-proxy project
+
+
+## use without docker:
+just do:
+```
+git clone https://github.com/frequentcat/kucoin-proxy/
+cd kucoin-proxy
+npm install
+node .
+```
