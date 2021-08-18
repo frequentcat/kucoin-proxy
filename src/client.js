@@ -18,13 +18,13 @@ class Client {
 
             this.subscribed.push(symbol + interval);
 
-            console.log('HELLO')
 
             this.client.MarketCandles(symbol, interval, (res) => {
+
                 console.log(res);
+                let timeDiff = Math.abs(Object.keys(chart)[0] - Object.keys(chart)[1]);
 
-                console.log('HELLO wo ist res')
-
+                
                 if (!this.klines[symbol + interval]) {
                     this.klines[symbol + interval] = new FixedQueue(1000, []);
                 }
