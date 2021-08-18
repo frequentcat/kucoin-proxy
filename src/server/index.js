@@ -14,7 +14,12 @@ const getServer = async (client) => {
                 
     router.get('/api/v1/market/candles', async (req, res) => {
         console.log('-- get candle --')
-        res.send(await client.getCandles(req.query.symbol, req.query.type, req.query.startAt, req.query.endAt));
+        /* 
+        we have req.query.startAt, req.query.endAt usually coming with the request 
+        from freqtrade, but we are not using it here - just the "type" (1m->1h etc) 
+        eventually, we must 
+        */
+        res.send(await client.getCandles(req.query.symbol, req.query.type));
     });
 
     router.get('/health', async (req, res) => {

@@ -4,6 +4,21 @@
 
 ## UNDER DEVELOPMENT, DO NOT USE YET
 
+# dev setup:
+## use without docker:
+just do:
+```
+git clone https://github.com/frequentcat/kucoin-proxy/
+cd kucoin-proxy
+npm install
+cd src
+git clone https://github.com/frequentcat/kucoin-websocket-api
+cd ..
+node .
+```
+
+## i'll repair docker when the other stuff is running
+
 
 # todo:
 
@@ -51,11 +66,3 @@ with the .env file (copy the .env.sample) you can set an other port for the serv
 If you want to let this run in host network mode, check out the binance-proxy project
 
 
-## use without docker:
-just do:
-```
-git clone https://github.com/frequentcat/kucoin-proxy/
-cd kucoin-proxy
-npm install
-node .
-```
